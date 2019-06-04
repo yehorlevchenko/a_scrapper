@@ -1,13 +1,6 @@
-import asyncio
 import aiohttp
-import schedule
-import time
 import logging
-from dbhandler import DBHandler
-
-QUERY_PER_TICK = 5
-CHECK_TIME = 10  # Seconds between requests
-DB_NAME = "suggestion.db"
+from .dbhandler import DBHandler
 
 logging.basicConfig(
     filename='scrapper.log',
@@ -15,24 +8,26 @@ logging.basicConfig(
     format='%(asctime)-15s %(message)s'
 )
 
-
 class QueryStack:
-    def __init__(self):
+
+    def __init__(self, query_size, db_name):
         self.url = 'https://allo.ua/ua/catalogsearch/ajax/suggest/?'
         self.headers = {
             'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko)',
             'Connection': 'close'}
-        self.query_step = 5
+        self.query_size = query_size
+        self.db_handler = DBHandler(db_name)
+        self.db_handler.db_populate()
         self.items = []
         logging.info(f"Instance of QueryStack initiated")
 
     def get_queries(self):
-        rows = db_handler.db_get_queries()
+        rows = self.db_handler.db_get_queries()
         self.items = [row[1] for row in rows]
 
-    def process_queries(self):
-        query_list = self.items[:QUERY_PER_TICK]
-        self.items = self.items[QUERY_PER_TICK:]
+    def process_queries(self, loop):
+        query_list = self.items[:self.query_size]
+        self.items = self.items[self.query_size:]
         logging.info(f"QueryStack started processing queries {query_list}")
         for item in query_list:
             logging.info(f"QueryStack processing {item}")
@@ -55,29 +50,7 @@ class QueryStack:
             self.save_data(records, query_name)
 
     def save_data(self, records, query_name):
-        if db_handler.db_insert_suggestion(records, query_name):
+        if self.db_handler.db_insert_suggestion(records, query_name):
             logging.info(f"QueryStack saved {query_name} data to DB")
         else:
             logging.error(f"QueryStack FAILED to save {query_name} data to DB")
-
-
-loop = asyncio.get_event_loop()
-db_handler = DBHandler(db_name=DB_NAME)
-db_handler.db_populate()
-query_stack = QueryStack()
-query_stack.get_queries()
-query_stack.process_queries()
-
-
-def method_wrapper(method):
-    method()
-
-
-# Schedule requests
-schedule.clear()
-schedule.every(CHECK_TIME).seconds.do(method_wrapper, query_stack.process_queries)
-
-# Main loop
-while True:
-    schedule.run_pending()
-    time.sleep(CHECK_TIME)
