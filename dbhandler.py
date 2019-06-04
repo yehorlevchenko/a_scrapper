@@ -1,4 +1,5 @@
 import sqlite3
+import logging
 from itertools import product
 
 
@@ -26,13 +27,10 @@ class DBHandler:
         not_processed_rows = self.cursor.fetchall()
 
         if len(not_processed_rows) == len(all_rows):
-            print("All queries are not processed")
             return all_rows
         elif 0 < len(not_processed_rows) < len(all_rows):
-            print("Queries partially processed")
             return not_processed_rows
         else:
-            print("All queries processed")
             q = "UPDATE query SET processed = 0"
             self.cursor.execute(q)
             self.connection.commit()
@@ -67,4 +65,4 @@ class DBHandler:
             self.cursor.executemany("INSERT OR IGNORE INTO query(name, processed) VALUES (?, ?)", records)
             self.connection.commit()
         else:
-            print(f"Query table is already populated: {query_count} records.")
+            logging.info(f"Query table is already populated: {query_count} records.")

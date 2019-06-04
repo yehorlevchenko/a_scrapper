@@ -1,0 +1,98 @@
+2019-06-04 16:46:32,098 Query table is already populated: 17576 records.
+2019-06-04 16:46:32,098 Instance of QueryStack initiated
+2019-06-04 16:46:32,143 QueryStack started processing queries ['abj', 'adh', 'adi', 'adj', 'adk']
+2019-06-04 16:46:32,143 QueryStack processing abj
+2019-06-04 16:46:32,568 QueryStack requested abj
+2019-06-04 16:46:32,569 QueryStack received response for abj
+2019-06-04 16:46:32,569 QueryStack processing adh
+2019-06-04 16:46:33,171 QueryStack requested adh
+2019-06-04 16:46:33,171 QueryStack received response for adh
+2019-06-04 16:46:33,171 QueryStack unpacked data from adh
+2019-06-04 16:46:33,175 QueryStack saved adh data to DB
+2019-06-04 16:46:33,175 QueryStack processing adi
+2019-06-04 16:46:33,784 QueryStack requested adi
+2019-06-04 16:46:33,784 QueryStack received response for adi
+2019-06-04 16:46:33,785 QueryStack unpacked data from adi
+2019-06-04 16:46:33,788 QueryStack saved adi data to DB
+2019-06-04 16:46:33,788 QueryStack processing adj
+2019-06-04 16:46:34,399 QueryStack requested adj
+2019-06-04 16:46:34,400 QueryStack received response for adj
+2019-06-04 16:46:34,400 QueryStack unpacked data from adj
+2019-06-04 16:46:34,403 QueryStack saved adj data to DB
+2019-06-04 16:46:34,404 QueryStack processing adk
+2019-06-04 16:46:36,551 QueryStack requested adk
+2019-06-04 16:46:36,551 QueryStack received response for adk
+2019-06-04 16:46:36,552 QueryStack unpacked data from adk
+2019-06-04 16:46:36,555 QueryStack saved adk data to DB
+2019-06-04 16:46:46,558 Running job Every 10 seconds do method_wrapper(<bound method QueryStack.process_queries of <__main__.QueryStack object at 0x11023cb38>>) (last run: [never], next run: 2019-06-04 16:46:46)
+2019-06-04 16:46:46,559 QueryStack started processing queries ['adl', 'adm', 'adn', 'ado', 'adp']
+2019-06-04 16:46:46,559 QueryStack processing adl
+2019-06-04 16:46:47,302 QueryStack requested adl
+2019-06-04 16:46:47,302 QueryStack received response for adl
+2019-06-04 16:46:47,302 QueryStack unpacked data from adl
+2019-06-04 16:46:47,305 QueryStack saved adl data to DB
+2019-06-04 16:46:47,306 QueryStack processing adm
+2019-06-04 16:46:47,727 QueryStack requested adm
+2019-06-04 16:46:47,727 QueryStack received response for adm
+2019-06-04 16:46:47,727 QueryStack unpacked data from adm
+2019-06-04 16:46:47,730 QueryStack saved adm data to DB
+2019-06-04 16:46:47,731 QueryStack processing adn
+2019-06-04 16:46:48,223 QueryStack requested adn
+2019-06-04 16:46:48,223 QueryStack received response for adn
+2019-06-04 16:46:48,223 QueryStack unpacked data from adn
+2019-06-04 16:46:48,226 QueryStack saved adn data to DB
+2019-06-04 16:46:48,226 QueryStack processing ado
+2019-06-04 16:46:48,837 QueryStack requested ado
+2019-06-04 16:46:48,838 QueryStack received response for ado
+2019-06-04 16:46:48,838 QueryStack unpacked data from ado
+2019-06-04 16:46:48,841 QueryStack saved ado data to DB
+2019-06-04 16:46:48,841 QueryStack processing adp
+2019-06-04 16:46:49,452 QueryStack requested adp
+2019-06-04 16:46:49,453 QueryStack received response for adp
+2019-06-04 16:46:49,453 QueryStack unpacked data from adp
+2019-06-04 16:46:49,456 QueryStack saved adp data to DB
+2019-06-04 16:46:59,457 Running job Every 10 seconds do method_wrapper(<bound method QueryStack.process_queries of <__main__.QueryStack object at 0x11023cb38>>) (last run: 2019-06-04 16:46:49, next run: 2019-06-04 16:46:59)
+2019-06-04 16:46:59,457 QueryStack started processing queries ['adq', 'adr', 'ads', 'adt', 'adu']
+2019-06-04 16:46:59,457 QueryStack processing adq
+2019-06-04 16:47:00,135 QueryStack requested adq
+2019-06-04 16:47:00,136 QueryStack received response for adq
+2019-06-04 16:47:00,136 QueryStack unpacked data from adq
+2019-06-04 16:47:00,139 QueryStack saved adq data to DB
+2019-06-04 16:47:00,140 QueryStack processing adr
+2019-06-04 16:47:00,973 QueryStack requested adr
+2019-06-04 16:47:00,974 QueryStack received response for adr
+2019-06-04 16:47:00,974 QueryStack unpacked data from adr
+2019-06-04 16:47:00,976 QueryStack saved adr data to DB
+2019-06-04 16:47:00,977 QueryStack processing ads
+2019-06-04 16:47:01,746 QueryStack requested ads
+2019-06-04 16:47:01,747 QueryStack received response for ads
+2019-06-04 16:47:01,747 QueryStack unpacked data from ads
+2019-06-04 16:47:01,749 QueryStack saved ads data to DB
+2019-06-04 16:47:01,749 QueryStack processing adt
+2019-06-04 16:47:02,405 QueryStack requested adt
+2019-06-04 16:47:02,405 QueryStack received response for adt
+2019-06-04 16:47:02,405 QueryStack unpacked data from adt
+2019-06-04 16:47:02,408 QueryStack saved adt data to DB
+2019-06-04 16:47:02,408 QueryStack processing adu
+2019-06-04 16:47:03,276 QueryStack requested adu
+2019-06-04 16:47:03,277 QueryStack received response for adu
+2019-06-04 16:47:03,277 QueryStack unpacked data from adu
+2019-06-04 16:47:03,280 QueryStack saved adu data to DB
+2019-06-04 16:47:13,282 Running job Every 10 seconds do method_wrapper(<bound method QueryStack.process_queries of <__main__.QueryStack object at 0x11023cb38>>) (last run: 2019-06-04 16:47:03, next run: 2019-06-04 16:47:13)
+2019-06-04 16:47:13,283 QueryStack started processing queries ['adv', 'adw', 'adx', 'ady', 'adz']
+2019-06-04 16:47:13,283 QueryStack processing adv
+2019-06-04 16:47:14,029 QueryStack requested adv
+2019-06-04 16:47:14,030 QueryStack received response for adv
+2019-06-04 16:47:14,030 QueryStack unpacked data from adv
+2019-06-04 16:47:14,035 QueryStack saved adv data to DB
+2019-06-04 16:47:14,036 QueryStack processing adw
+2019-06-04 16:47:14,643 QueryStack requested adw
+2019-06-04 16:47:14,643 QueryStack received response for adw
+2019-06-04 16:47:14,643 QueryStack unpacked data from adw
+2019-06-04 16:47:14,647 QueryStack saved adw data to DB
+2019-06-04 16:47:14,647 QueryStack processing adx
+2019-06-04 16:47:15,061 QueryStack requested adx
+2019-06-04 16:47:15,062 QueryStack received response for adx
+2019-06-04 16:47:15,062 QueryStack unpacked data from adx
+2019-06-04 16:47:15,064 QueryStack saved adx data to DB
+2019-06-04 16:47:15,064 QueryStack processing ady
