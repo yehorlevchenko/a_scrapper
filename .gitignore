@@ -40,6 +40,9 @@ ENV/
 env.bak/
 venv.bak/
 
+# sqlite
+*.db-journal
+
 # mac os
 .DS_Store
 
